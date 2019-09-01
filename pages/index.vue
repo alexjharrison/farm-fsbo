@@ -2,7 +2,7 @@
   <main>
     <div id="banner" class="d-flex">
       <div class="headers mt-auto mb-5 container d-flex flex-column align-items-end text-right">
-        <h1>Picturesque Farm for Sale</h1>
+        <h1 class="flex-shrink-1">Central PA Farm for Sale</h1>
         <h1>$1,999,000</h1>
       </div>
     </div>
@@ -10,8 +10,14 @@
       <em>
         <h1>For Sale</h1>
       </em>
-      <h2>Picturesque Farm near Milton, PA</h2>
-      <h2>704 Klinetob Rd, Milton, PA 17847</h2>
+      <h2>132.5 Acre Picturesque Farm near Milton, PA</h2>
+      <h4>Gently Rolling Hills overlooking a Beautiful 18 Hole Golf Course</h4>
+      <h4>
+        <a
+          target="_blank"
+          href="https://goo.gl/maps/W2Rv29ryLkvzHWeq9"
+        >704 Klinetob Rd, Milton, PA 17847</a>
+      </h4>
       <b-button :to="{path:'/contact'}" size="lg" variant="outline-dark" class="m-3">Contact Us</b-button>
     </div>
     <div class="custom-container mb-5">
@@ -36,6 +42,17 @@
         </div>
       </div>
     </div>
+    <hr class="my-5" />
+    <n-link
+      id="drone-link"
+      :to="{path:'/house'}"
+      class="d-flex flex-column justify-content-center align-items-center position-relative text-decoration-none mb-5"
+    >
+      <b-button class="tour-btn" variant="outline-dark">Go to the virtual tour</b-button>
+      <video autoplay muted loop id="drone-video">
+        <source src="~assets/videos/drone.mp4" type="video/mp4" />
+      </video>
+    </n-link>
   </main>
 </template>
 
@@ -59,5 +76,19 @@ export default {
 #banner h1 {
   font-size: 55px;
   text-shadow: 2px 2px 2px rgb(71, 71, 71);
+}
+#drone-video {
+  width: 100%;
+  max-width: 1440px;
+  opacity: 0.85;
+  margin-top: -200px;
+}
+.tour-btn {
+  font-size: 50px;
+  margin-top: 150px;
+  z-index: 100;
+}
+.tour-btn:hover {
+  text-decoration: none;
 }
 </style>

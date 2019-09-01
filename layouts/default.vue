@@ -19,7 +19,7 @@
       </header>
       <nuxt />
     </div>
-    <footer>Copyright &#9400; {{new Date().getFullYear()}}</footer>
+    <footer class="mt-5">Copyright &#9400; {{new Date().getFullYear()}}</footer>
   </div>
 </template>
 

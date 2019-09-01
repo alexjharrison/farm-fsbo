@@ -11,7 +11,7 @@
           style="border:0;"
           allowfullscreen
         ></iframe>
-        <div class="col-lg-6 d-flex flex-column">
+        <div class="col-lg-6 d-flex flex-column align-items-start">
           <h2 class="mb-3">Contact Info</h2>
           <h4>Joan Harrison</h4>
           <a href="tel:5555555555">(555) 555-5555</a>
@@ -39,7 +39,7 @@
               placeholder="Enter your message..."
               rows="3"
             ></b-form-textarea>
-            <b-button type="submit" class="my-3" variant="outline-primary">Send</b-button>
+            <b-button type="submit" class="my-3" variant="outline-primary">{{btnText}}</b-button>
           </b-form>
         </div>
       </div>
@@ -55,13 +55,14 @@ export default {
       name: '',
       phone: '',
       email: '',
-      message: ''
+      message: '',
+      btnText: 'Send'
     }
   },
   methods: {
     submitInquiry() {
       const { name, phone, email, message } = this
-      console.log('started')
+      this.btnText = 'Sending...'
       axios
         .post(
           '/.netlify/functions/mailgun-form',
@@ -73,8 +74,12 @@ export default {
           },
           { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }
         )
-        .then(({ data }) => console.log({ data }))
-        .catch(({ data }) => console.log({ data }))
+        .then(({ data }) => (this.btnText = 'Successfully Sent!'))
+        .catch(
+          ({ data }) =>
+            (this.btnText =
+              'Something broke.  Will punish the developer harshly for this.')
+        )
     }
   }
 }
