@@ -1,0 +1,13 @@
+<template>
+  <main>
+    <h1>Contact</h1>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d349.64073978282977!2d-76.84251193867428!3d41.041000709586974!2m3!1f90!2f39.35587897104!3f0!3m2!1i1024!2i768!4f35!3m3!1m2!1s0x89cf0d2657084dcb%3A0x422180fde59114d4!2sUnnamed%20Road%2C%20Milton%2C%20PA%2017847!5e1!3m2!1sen!2sus!4v1567342992302!5m2!1sen!2sus"
+      width="1000"
+      height="450"
+      frameborder="0"
+      style="border:0;"
+      allowfullscreen
+    ></iframe>
+  </main>
+</template>
