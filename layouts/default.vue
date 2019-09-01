@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="body">
     <div class="footer-pusher">
       <header>
-        <b-navbar toggleable="md" type="dark" variant="info">
+        <b-navbar toggleable="md" type="dark" variant="secondary">
           <div class="container">
             <b-navbar-brand :to="{path: '/'}">Milton PA Farm</b-navbar-brand>
             <b-navbar-toggle target="nav-collapse" />
@@ -31,19 +31,39 @@ export default {
 </script>
 
 <style>
+html,
+body,
+#__nuxt,
+#__layout,
+.body {
+  height: 100%;
+}
 body {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+main {
+  background-color: rgb(245, 253, 255);
+  height: 100%;
+}
+.custom-container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
 </style>
 <style scoped>
+.body {
+  display: flex;
+  flex-direction: column;
+}
 .footer-pusher {
-  min-height: calc(100vh - 58px);
+  flex: 1 0 auto;
 }
 footer {
   background-color: #ccc;
-  min-height: 50px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 </style>
