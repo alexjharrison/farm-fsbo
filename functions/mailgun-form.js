@@ -18,13 +18,17 @@ const headers = {
 // Our cloud function
 exports.handler = function(event, context, callback) {
   let data = JSON.parse(event.body)
-  let { name, email, message } = data
+  let { name, email, message, phone } = data
   let mailOptions = {
     from: `${name} <${email}>`,
     to: process.env.MY_EMAIL_ADDRESS,
     replyTo: email,
     subject: `Message from farm site`,
-    text: `${message}`
+    text: `
+    Name: ${name}
+    Email: ${email}
+    Phone: ${phone}
+    Message: ${message}`
   }
 
   // It's really as simple as this,
@@ -34,14 +38,14 @@ exports.handler = function(event, context, callback) {
     if (error) {
       console.log(error)
       callback(null, {
-        errorCode,
+        statusCode: errorCode,
         headers,
         body: JSON.stringify(error)
       })
     } else {
       console.log(body)
       callback(null, {
-        successCode,
+        statusCode: successCode,
         headers,
         body: JSON.stringify(body)
       })

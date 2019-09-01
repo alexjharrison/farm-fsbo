@@ -39,7 +39,7 @@
               placeholder="Enter your message..."
               rows="3"
             ></b-form-textarea>
-            <b-button class="my-3" variant="outline-primary">Send</b-button>
+            <b-button type="submit" class="my-3" variant="outline-primary">Send</b-button>
           </b-form>
         </div>
       </div>
@@ -48,6 +48,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   data() {
     return {
@@ -58,7 +59,23 @@ export default {
     }
   },
   methods: {
-    submitInquiry() {}
+    submitInquiry() {
+      const { name, phone, email, message } = this
+      console.log('started')
+      axios
+        .post(
+          '/.netlify/functions/mailgun-form',
+          {
+            name,
+            phone,
+            email,
+            message
+          },
+          { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }
+        )
+        .then(({ data }) => console.log({ data }))
+        .catch(({ data }) => console.log({ data }))
+    }
   }
 }
 </script>
