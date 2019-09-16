@@ -46,11 +46,11 @@
     <n-link
       id="drone-link"
       :to="{path:'/house'}"
-      class="d-flex flex-column justify-content-start align-items-start position-relative text-decoration-none mb-5"
+      class="d-flex flex-column justify-content-center align-items-start position-relative text-decoration-none mb-5"
     >
       <b-button class="tour-btn" variant="dark">Go to the virtual tour</b-button>
-      <video autoplay muted loop id="drone-video">
-        <source src="~assets/videos/480p.mp4" type="video/mp4" />
+      <video preload autoplay muted loop id="drone-video" class="m-auto">
+        <source src="~assets/videos/360p.mp4" type="video/mp4" />
       </video>
     </n-link>
   </main>
