@@ -23,19 +23,19 @@
     <div class="custom-container mb-5">
       <div class="row text-center mx-2">
         <div class="col-md-4 my-2">
-          <b-card title="The House" img-top img-src="~assets/home/house-thumb.jpg">
+          <b-card title="The House" img-top img-src="~assets/images/home/house-thumb.jpg">
             <b-card-text>Explore the house in a virtual tour</b-card-text>
             <b-button :to="{path:'/house'}" variant="outline-primary">Check it out ➚</b-button>
           </b-card>
         </div>
         <div class="col-md-4 my-2">
-          <b-card title="The Farm" img-top img-src="~assets/home/farm-thumb.jpg">
+          <b-card title="The Farm" img-top img-src="~assets/images/home/farm-thumb.jpg">
             <b-card-text>See what the farm has to offer</b-card-text>
             <b-button :to="{path:'/farm'}" variant="outline-primary">Check it out ➚</b-button>
           </b-card>
         </div>
         <div class="col-md-4 my-2">
-          <b-card title="The History" img-top img-src="~assets/home/history-thumb.jpg">
+          <b-card title="The History" img-top img-src="~assets/images/home/history-thumb.jpg">
             <b-card-text>Learn the history of the farm</b-card-text>
             <b-button :to="{path:'/history'}" variant="outline-primary">Check it out ➚</b-button>
           </b-card>
@@ -46,11 +46,11 @@
     <n-link
       id="drone-link"
       :to="{path:'/house'}"
-      class="d-flex flex-column justify-content-center align-items-center position-relative text-decoration-none mb-5"
+      class="d-flex flex-column justify-content-start align-items-start position-relative text-decoration-none mb-5"
     >
-      <b-button class="tour-btn" variant="outline-dark">Go to the virtual tour</b-button>
+      <b-button class="tour-btn" variant="dark">Go to the virtual tour</b-button>
       <video autoplay muted loop id="drone-video">
-        <source src="~assets/videos/drone.mp4" type="video/mp4" />
+        <source src="~assets/videos/480p.mp4" type="video/mp4" />
       </video>
     </n-link>
   </main>
@@ -65,7 +65,7 @@ export default {
 
 <style scoped>
 #banner {
-  background-image: url('~assets/home/banner-img.jpg');
+  background-image: url('~assets/images/home/banner-img.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -80,12 +80,11 @@ export default {
 #drone-video {
   width: 100%;
   max-width: 1440px;
-  opacity: 0.85;
-  margin-top: -200px;
+  margin-top: -130px;
 }
 .tour-btn {
-  font-size: 50px;
-  margin-top: 150px;
+  font-size: 30px;
+  margin: 100px 0 0 50px;
   z-index: 100;
 }
 .tour-btn:hover {

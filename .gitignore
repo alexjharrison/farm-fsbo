@@ -89,3 +89,6 @@ sw.*
 
 # Vim swap files
 *.swp
+
+assets/videos/4k.mov
+assets/videos/720p.mp4
