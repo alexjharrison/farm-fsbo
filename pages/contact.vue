@@ -1,21 +1,31 @@
 <template>
   <main>
     <div class="container">
-      <h1 class="py-4">Contact</h1>
-      <div class="row">
+      <h1 class="my-4 border-bottom d-inline-block">Contact Info</h1>
+      <div class="stuff d-flex justify-content-around align-items-center">
         <iframe
           class="col-lg-6"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23462.31910890794!2d-76.85238457418735!3d41.01914629829463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89cf0d2f4cf23c55%3A0xb67e5d036e6477c1!2s704%20Klinetob%20Rd%2C%20Milton%2C%20PA%2017847!5e1!3m2!1sen!2sus!4v1567349677392!5m2!1sen!2sus"
-          height="450"
           frameborder="0"
           style="border:0;"
           allowfullscreen
         ></iframe>
         <div class="col-lg-6 d-flex flex-column align-items-start">
-          <h2 class="mb-3">Contact Info</h2>
-          <h4>Joan Harrison</h4>
-          <a href="tel:5555555555">(555) 555-5555</a>
-          <a href="mailto:joan@joan.joan">joan@joan.joan</a>
+          <h3>Doug Wertz</h3>
+          <h6>Sales Associate, Licensed Realtor</h6>
+          <h6>Coldwell Banker</h6>
+          <h6 class="mb-0">PENN ONE</h6>
+          <h6>REAL ESTATE</h6>
+          <span class="mt-2">
+            <a href="tel:5705241143">(570) 524-1143</a> Business
+          </span>
+          <span>
+            <a href="tel:5707139961">(570) 713-9961</a> Cell
+          </span>
+          <span>
+            <a href="fax:5705242814">(570) 524-2814</a> Fax
+          </span>
+          <a class="mt-3" href="mailto:douglaswertz@msn.com">douglaswertz@msn.com</a>
           <h4 class="mt-4">Or send an inquiry</h4>
           <b-form @submit.prevent="submitInquiry">
             <div class="d-flex">
@@ -86,4 +96,15 @@ export default {
 </script>
 
 <style scoped>
+iframe {
+  height: 600px;
+}
+@media screen and (max-width: 990px) {
+  iframe {
+    height: 400px;
+  }
+  .stuff {
+    flex-wrap: wrap-reverse;
+  }
+}
 </style>

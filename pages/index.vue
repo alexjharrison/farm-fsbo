@@ -42,16 +42,6 @@
         </div>
       </div>
     </div>
-    <hr class="my-5" />
-    <n-link
-      id="drone-link"
-      :to="{path:'/house'}"
-      class="d-flex flex-column justify-content-center align-items-start position-relative text-decoration-none mb-5"
-    >
-      <b-button class="tour-btn" variant="dark">Go to the virtual tour</b-button>
-      <video preload autoplay muted loop id="drone-video" class="m-auto">
-        <source src="~assets/videos/360p.mp4" type="video/mp4" />
-      </video>
     </n-link>
   </main>
 </template>
@@ -76,18 +66,5 @@ export default {
 #banner h1 {
   font-size: 55px;
   text-shadow: 2px 2px 2px rgb(71, 71, 71);
-}
-#drone-video {
-  width: 100%;
-  max-width: 1440px;
-  margin-top: -130px;
-}
-.tour-btn {
-  font-size: 30px;
-  margin: 100px 0 0 50px;
-  z-index: 100;
-}
-.tour-btn:hover {
-  text-decoration: none;
 }
 </style>

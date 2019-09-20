@@ -1,9 +1,12 @@
 <template>
-  <main class="p-5">
+  <main class="p-4">
     <div class="custom-container">
-      <div class="m-5">
-        <h1>History of Focus Farm</h1>
-        <h2>RODRIGO by Karen Nace</h2>
+      <div class="d-flex justify-content-around align-items-center">
+        <div>
+          <h1>History of Focus Farm</h1>
+          <h2>RODRIGO by Karen Nace</h2>
+        </div>
+        <b-img fluid src="@/assets/images/history/old-barn.png" />
       </div>
       <p>
         As early as 1682, William Penn deeded land in Pennsylvania from the Indians.
@@ -171,5 +174,9 @@ p {
   line-height: 2.7rem;
   margin: 3rem 1.2rem;
   text-indent: 3rem;
+}
+img {
+  max-height: 300px;
+  border-radius: 10px;
 }
 </style>
