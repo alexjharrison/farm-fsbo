@@ -3,7 +3,7 @@
     <div class="footer-pusher">
       <header>
         <b-navbar toggleable="md" type="dark" variant="secondary">
-          <div class="container">
+          <div class="container-fluid mw-1440 px-2">
             <b-navbar-brand :to="{path: '/'}">Milton PA Farm</b-navbar-brand>
             <b-navbar-toggle target="nav-collapse" />
             <b-collapse is-nav id="nav-collapse">
@@ -49,11 +49,18 @@ main {
   max-width: 1440px;
   margin: 0 auto;
 }
+.pointer {
+  cursor: pointer;
+}
 </style>
 <style scoped>
 .body {
   display: flex;
   flex-direction: column;
+}
+.mw-1440 {
+  max-width: 1440px;
+  width: 1440px;
 }
 .footer-pusher {
   flex: 1 0 auto;

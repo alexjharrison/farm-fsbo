@@ -43,8 +43,22 @@ module.exports = {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
-    '@nuxtjs/dotenv'
+    '@nuxtjs/dotenv',
+    '@nuxtjs/google-analytics',
+    'nuxt-fontawesome'
   ],
+
+  fontawesome: {
+    component: 'fa',
+    imports: [
+      { set: '@fortawesome/free-solid-svg-icons', icons: ['faCaretRight'] }
+    ]
+  },
+
+  googleAnalytics: {
+    id: 'UA-130438116-3'
+  },
+
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options

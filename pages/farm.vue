@@ -1,8 +1,8 @@
 <template>
   <main>
-    <div class="custom-container">
+    <div class="custom-container p-2 mt-4">
+      <h2 class="mb-4">Aerial View</h2>
       <div class="embed-wrapper">
-        <h2>Aerial View of the Farm</h2>
         <b-embed
           src="https://www.youtube.com/embed/YX0nJ0imz04"
           frameborder="0"
@@ -18,9 +18,9 @@
 
 <style scoped>
 .embed-wrapper {
-  width: 95%;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 3em 0;
+  /* width: 95%; */
+  max-width: 1440px;
+  /* max-height:  */
+  margin: 40px auto;
 }
 </style>

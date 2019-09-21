@@ -1,6 +1,6 @@
 <template>
   <main>
-    <div class="container">
+    <div class="custom-container p-2">
       <h1 class="my-4 border-bottom d-inline-block">Contact Info</h1>
       <div class="stuff d-flex justify-content-around align-items-center">
         <iframe
@@ -11,27 +11,32 @@
           allowfullscreen
         ></iframe>
         <div class="col-lg-6 d-flex flex-column align-items-start">
-          <h3>Doug Wertz</h3>
-          <h6>Sales Associate, Licensed Realtor</h6>
-          <h6>Coldwell Banker</h6>
-          <h6 class="mb-0">PENN ONE</h6>
-          <h6>REAL ESTATE</h6>
-          <span class="mt-2">
-            <a href="tel:5705241143">(570) 524-1143</a> Business
-          </span>
-          <span>
-            <a href="tel:5707139961">(570) 713-9961</a> Cell
-          </span>
-          <span>
-            <a href="fax:5705242814">(570) 524-2814</a> Fax
-          </span>
-          <a class="mt-3" href="mailto:douglaswertz@msn.com">douglaswertz@msn.com</a>
+          <div class="d-flex">
+            <div>
+              <h3 class="mb-0">Doug Wertz</h3>
+              <h5>Sales Associate, Licensed Realtor</h5>
+              <h6 class="mb-2">Coldwell Banker</h6>
+              <h6 class="mb-0">PENN ONE</h6>
+              <h6>REAL ESTATE</h6>
+              <div class="mt-2">
+                <a href="tel:5705241143">(570) 524-1143</a> Business
+              </div>
+              <div>
+                <a href="tel:5707139961">(570) 713-9961</a> Cell
+              </div>
+              <div>(570) 524-2814 Fax</div>
+              <a class="mt-3" href="mailto:douglaswertz@msn.com">douglaswertz@msn.com</a>
+            </div>
+            <div class="img-container ml-5 flex-shrink-1">
+              <b-img fluid src="@/assets/images/contact/doug-wertz.jpg" alt="doug wertz portrait" />
+            </div>
+          </div>
           <h4 class="mt-4">Or send an inquiry</h4>
           <b-form @submit.prevent="submitInquiry">
             <div class="d-flex">
               <div class="m-1">
-                <label for="name">Name</label>
-                <b-form-input v-model="name" id="name" />
+                <label for="name">Name *</label>
+                <b-form-input v-model="name" id="name" required />
               </div>
               <div class="m-1">
                 <label for="phone">Phone</label>
@@ -42,13 +47,15 @@
                 <b-form-input type="email" v-model="email" id="email" />
               </div>
             </div>
-            <label for="message">Enter Message</label>
+            <label for="message">Enter Message *</label>
             <b-form-textarea
               v-model="message"
               id="message"
               placeholder="Enter your message..."
               rows="3"
+              required
             ></b-form-textarea>
+            <div class="my-2">* Required</div>
             <b-button type="submit" class="my-3" variant="outline-primary">{{btnText}}</b-button>
           </b-form>
         </div>
@@ -98,6 +105,11 @@ export default {
 <style scoped>
 iframe {
   height: 600px;
+}
+img {
+  max-height: 240px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px 5px rgb(242, 255, 255);
 }
 @media screen and (max-width: 990px) {
   iframe {
