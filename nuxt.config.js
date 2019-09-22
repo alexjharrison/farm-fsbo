@@ -4,14 +4,28 @@ module.exports = {
    ** Headers of the page
    */
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'Milton Farm For Sale',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ''
+        content:
+          '132.5 acre picturesque farm for sale at 704 Klinetob Road, Milton, PA 17847.'
+      },
+      {
+        name: 'keywords',
+        content:
+          'milton, farm, sale, house, real estate, property, 17847, agriculture, home, realtor, buy, house for sale, farm for sale'
+      },
+      {
+        name: 'revisit-after',
+        content: '1 days'
+      },
+      {
+        name: 'robots',
+        content: 'index, follow'
       }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
@@ -45,7 +59,8 @@ module.exports = {
     '@nuxtjs/pwa',
     '@nuxtjs/dotenv',
     '@nuxtjs/google-analytics',
-    'nuxt-fontawesome'
+    'nuxt-fontawesome',
+    '@nuxtjs/sitemap'
   ],
 
   fontawesome: {
@@ -58,6 +73,12 @@ module.exports = {
   googleAnalytics: {
     id: 'UA-130438116-3'
   },
+
+  // pwa: {
+  //   icons: {
+  //     iconSrc: '~@assets/images/favicon.png'
+  //   }
+  // },
 
   /*
    ** Axios module configuration
