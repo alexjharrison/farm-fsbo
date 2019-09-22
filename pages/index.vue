@@ -23,19 +23,19 @@
     <div class="custom-container mb-5">
       <div class="row text-center mx-2">
         <div class="col-md-4 my-2">
-          <b-card title="The House" img-top img-src="~assets/images/home/house-thumb.jpg">
+          <b-card title="The House" img-alt="house" img-top img-src="~assets/images/home/house-thumb.jpg">
             <b-card-text>Explore the house in a virtual tour</b-card-text>
             <b-button :to="{path:'/house'}" variant="outline-primary">Check it out ➚</b-button>
           </b-card>
         </div>
         <div class="col-md-4 my-2">
-          <b-card title="The Farm" img-top img-src="~assets/images/home/farm-thumb.jpg">
+          <b-card title="The Farm" img-top img-alt="farmhouse" img-src="~assets/images/home/farm-thumb.jpg">
             <b-card-text>See what the farm has to offer</b-card-text>
             <b-button :to="{path:'/farm'}" variant="outline-primary">Check it out ➚</b-button>
           </b-card>
         </div>
         <div class="col-md-4 my-2">
-          <b-card title="The History" img-top img-src="~assets/images/home/history-thumb.jpg">
+          <b-card title="The History" img-top img-alt="farmhouse being built" img-src="~assets/images/home/history-thumb.jpg">
             <b-card-text>Learn the history of the farm</b-card-text>
             <b-button :to="{path:'/history'}" variant="outline-primary">Check it out ➚</b-button>
           </b-card>
