@@ -80,9 +80,13 @@ export default {
     submitInquiry() {
       const { name, phone, email, message } = this
       this.btnText = 'Sending...'
+      const postAddress =
+        process.NODE_ENV === 'production'
+          ? '/.netlify/functions/mailgun-form'
+          : 'http://localhost:9000/.netlify/functions/mailgun-form'
       axios
         .post(
-          '/.netlify/functions/mailgun-form',
+          postAddress,
           {
             name,
             phone,

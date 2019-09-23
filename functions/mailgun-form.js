@@ -24,7 +24,7 @@ exports.handler = function(event, context, callback) {
     to: process.env.TO_EMAIL_ADDRESS,
     bcc: process.env.BCC_EMAIL_ADDRESS,
     replyTo: email,
-    subject: `Message from farm site`,
+    subject: `Message from miltonpafarm.com contact form`,
     text: `
     Name: ${name}
     Email: ${email}
