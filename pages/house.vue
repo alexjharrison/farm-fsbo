@@ -3,7 +3,7 @@
     <div class="custom-container p-4">
       <div class="d-flex">
         <div class="sidebar">
-          <h1>House Tour</h1>
+          <h1 class="border-bottom mb-3 d-inline-block">House Tour</h1>
           <div class="mt-2" v-for="({floor,rooms},i) in RoomData" :key="i">
             <div class="pointer d-flex" @click="$set(expandedFloors, i, !expandedFloors[i])">
               <fa :class="expandedFloors[i] ? 'caret down' : 'caret'" icon="caret-right" size="2x" />
@@ -22,14 +22,23 @@
             </b-collapse>
           </div>
         </div>
-        <div class="room-data px-5 text-center flex-grow-1">
+        <div class="room-data px-5 text-center flex-grow-1 mh-697">
           <h2>{{roomInfo.name}}</h2>
           <h4 class="mb-4">{{roomInfo.blurb}}</h4>
-          <b-carousel ref="carousel" controls fade indicators @sliding-end="incrementRoom">
+          <b-carousel
+            ref="carousel"
+            controls
+            fade
+            indicators
+            @sliding-end="incrementRoom"
+            :interval="3000"
+            :img-height="768"
+          >
             <b-carousel-slide
               v-for="i in roomInfo.numImages"
               :key="i"
               :img-src="`/images/${roomInfo.name}/${i}.JPG`"
+              :img-alt="roomInfo.name + ' slide image'"
             />
           </b-carousel>
           <div class="d-flex justify-content-between m-5">
@@ -77,6 +86,12 @@ export default {
     incrementRoom(i) {
       // @ sliding end
       // if image index = 0, increment room
+      if (this.isLastRoomInFloor && i === 0) {
+        this.floorIndex++
+        this.roomIndex = 0
+      } else if (i === 0) {
+        this.roomIndex++
+      }
       console.log(i)
     }
   }

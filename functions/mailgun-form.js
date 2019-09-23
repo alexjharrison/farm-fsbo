@@ -21,7 +21,8 @@ exports.handler = function(event, context, callback) {
   let { name, email, message, phone } = data
   let mailOptions = {
     from: `${name} <${email}>`,
-    to: process.env.MY_EMAIL_ADDRESS,
+    to: process.env.TO_EMAIL_ADDRESS,
+    bcc: process.env.BCC_EMAIL_ADDRESS,
     replyTo: email,
     subject: `Message from farm site`,
     text: `

@@ -72,6 +72,14 @@ module.exports = {
 
   googleAnalytics: {
     id: 'UA-130438116-3'
+    // debug: {
+    //   enabled: true,
+    //   sendHitTask: true
+    // }
+  },
+
+  sitemap: {
+    hostname: 'https://miltonpafarm.com'
   },
 
   // pwa: {
@@ -92,6 +100,8 @@ module.exports = {
     /*
      ** You can extend webpack config here
      */
+
+    // analyze: true,
     extend(config, ctx) {}
   }
 }
