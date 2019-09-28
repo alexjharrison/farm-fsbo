@@ -1,9 +1,9 @@
 <template>
   <main>
     <div class="custom-container p-4">
-      <div class="d-flex">
+      <h1 class="border-bottom mb-3 d-inline-block">House Tour</h1>
+      <div class="d-flex page-stuff">
         <div class="sidebar">
-          <h1 class="border-bottom mb-3 d-inline-block">House Tour</h1>
           <div class="mt-2" v-for="({floor,rooms},i) in RoomData" :key="i">
             <div class="pointer d-flex" @click="$set(expandedFloors, i, !expandedFloors[i])">
               <fa :class="expandedFloors[i] ? 'caret down' : 'caret'" icon="caret-right" size="2x" />
@@ -23,8 +23,8 @@
           </div>
         </div>
         <div class="room-data px-5 text-center flex-grow-1 mh-697 position-relative">
-          <div class="play-pause">
-            <fa size="lg" :icon="isPaused? 'play':'pause'" @click="togglePause" />
+          <div class="play-pause" @click="togglePause">
+            <fa size="lg" :icon="isPaused? 'play':'pause'" />
           </div>
           <h2>{{roomInfo.name}}</h2>
           <h4 class="mb-4">{{roomInfo.blurb}}</h4>
@@ -59,7 +59,7 @@ export default {
       RoomData,
       floorIndex: 0,
       roomIndex: 0,
-      interval: 3000,
+      interval: 4000,
       isSliding: false,
       isPaused: false,
       expandedFloors: Array(RoomData.length).fill(false)
@@ -77,27 +77,25 @@ export default {
     }
   },
   methods: {
-    reset(i, j) {
+    async reset(i, j) {
+      if (this.isSliding) return
       this.floorIndex = i
       this.roomIndex = j
       this.expandedFloors = [...new Array(RoomData.length).fill(false)]
       this.$set(this.expandedFloors, i, true)
+
       this.$refs.carousel.setSlide(0)
       this.$refs.carousel.start()
       this.isPaused = false
       if (
         this.RoomData[this.floorIndex].rooms[this.roomIndex].numImages === 1
       ) {
-        console.log('hi')
         setTimeout(() => this.incrementRoom(0), this.interval)
       }
     },
     incrementRoom(i) {
       // @ sliding end
       // if image index = 0, increment room
-      if (this.RoomData[this.floorIndex].length === 1) {
-        console.log('only one')
-      }
       if (
         this.isLastRoomInFloor &&
         this.floorIndex === this.RoomData.length - 1
@@ -105,15 +103,12 @@ export default {
         this.reset(0, 0)
       }
       if (this.isLastRoomInFloor && i === 0) {
-        // this.floorIndex++
-        // this.roomIndex = 0
         this.reset(this.floorIndex + 1, 0)
       } else if (i === 0) {
         this.roomIndex++
         if (
           this.RoomData[this.floorIndex].rooms[this.roomIndex].numImages === 1
         ) {
-          console.log('hi')
           setTimeout(() => this.incrementRoom(0), this.interval)
         }
       }
@@ -133,6 +128,8 @@ export default {
 <style scoped>
 .sidebar {
   min-width: 250px;
+  display: flex;
+  flex-direction: column;
 }
 .caret {
   transition: 0.3s ease-out transform;
@@ -148,5 +145,12 @@ export default {
   background-color: #ddd;
   padding: 15px 17px 15px 18px;
   border-radius: 50%;
+}
+
+@media only screen and (max-width: 700px) {
+  .page-stuff {
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+  }
 }
 </style>

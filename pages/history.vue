@@ -1,12 +1,12 @@
 <template>
   <main class="p-4">
     <div class="custom-container">
-      <div class="d-flex justify-content-around align-items-center">
+      <div class="head d-flex justify-content-around align-items-center">
         <div>
           <h1>History of Focus Farm</h1>
           <h2>RODRIGO by Karen Nace</h2>
         </div>
-        <b-img fluid src="@/assets/images/history/old-barn.png" />
+        <b-img class="my-4" fluid src="@/assets/images/history/old-barn.png" />
       </div>
       <p>
         As early as 1682, William Penn deeded land in Pennsylvania from the Indians.
@@ -178,5 +178,10 @@ p {
 img {
   max-height: 300px;
   border-radius: 10px;
+}
+@media only screen and (max-width: 900px) {
+  .head {
+    flex-wrap: wrap;
+  }
 }
 </style>
