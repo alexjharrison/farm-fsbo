@@ -42,7 +42,7 @@ body {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 main {
-  background-color: rgb(245, 253, 255);
+  background-color: rgb(251, 251, 251);
   height: 100%;
 }
 .custom-container {

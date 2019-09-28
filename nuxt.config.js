@@ -30,6 +30,9 @@ module.exports = {
     ]
     // link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
+  server: {
+    port: 4005
+  },
   /*
    ** Customize the progress-bar color
    */
@@ -66,7 +69,10 @@ module.exports = {
   fontawesome: {
     component: 'fa',
     imports: [
-      { set: '@fortawesome/free-solid-svg-icons', icons: ['faCaretRight'] }
+      {
+        set: '@fortawesome/free-solid-svg-icons',
+        icons: ['faCaretRight', 'faPause', 'faPlay']
+      }
     ]
   },
 

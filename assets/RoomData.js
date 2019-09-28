@@ -11,11 +11,11 @@ export default [
         name: 'Breezeway',
         blurb: `11'5" X 21'6"`,
         blurb2: `Storage area in back of breezeway 7'4" X 8' with built-ins for extra storage`,
-        numImages: 8
+        numImages: 3
       },
       {
         name: 'Kitchen',
-        blurb: `Eat-in, 13'6" X 17'`,
+        blurb: `Eat-in with wooden parquet floor 13'6" X 17'`,
         numImages: 8
       },
       {
@@ -25,22 +25,22 @@ export default [
       },
       {
         name: 'Dining Room',
-        blurb: `17' X 17'`,
+        blurb: `17' X 17' Hardwood floor beneath carpets`,
         numImages: 4
       },
       {
         name: 'Living Room',
-        blurb: `17' X 18'`,
+        blurb: `17' X 18' Hardwood floor beneath carpets`,
         numImages: 4
       },
       {
         name: 'Sitting Room',
-        blurb: ` `,
+        blurb: `15'7" X 14' with stone fireplace Hardwood floor beneath carpets`,
         numImages: 2
       },
       {
         name: 'Half Bath',
-        blurb: `15'7" X 14' with stone fireplace`,
+        blurb: ``,
         numImages: 1
       }
     ]
@@ -56,12 +56,12 @@ export default [
       {
         name: 'Master Bedroom',
         blurb: `17'3" X 12'10"  with 8 1/2' closets and built-ins on opposite wall`,
-        numImages: 2
+        numImages: 1
       },
       {
         name: '2nd Bedroom',
         blurb: `17'3" X 14'1" with large walk-in closet`,
-        numImages: 3
+        numImages: 2
       },
       {
         name: 'Main Bathroom',
@@ -106,7 +106,7 @@ export default [
       {
         name: 'Workshop',
         blurb: `9'5" X 7'3"`,
-        numImages: 5
+        numImages: 2
       },
       {
         name: 'Basement 3rd Full Bathroom',
@@ -134,14 +134,14 @@ export default [
         numImages: 0
       },
       {
-        name: 'Kids Playroom',
-        blurb: ` `,
-        numImages: 0
+        name: 'Kids Insulated Playroom',
+        blurb: `Above garage with lots of storage`,
+        numImages: 2
       },
       {
         name: 'Barn - Workshop',
         blurb: ` `,
-        numImages: 0
+        numImages: 3
       }
     ]
   }
