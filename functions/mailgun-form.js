@@ -22,7 +22,7 @@ exports.handler = function(event, context, callback) {
   let mailOptions = {
     from: `${name} <${email}>`,
     to: process.env.TO_EMAIL_ADDRESS,
-    bcc: process.env.BCC_EMAIL_ADDRESS,
+    bcc: [process.env.BCC_EMAIL_ADDRESS],
     replyTo: email,
     subject: `Message from miltonpafarm.com contact form`,
     text: `
