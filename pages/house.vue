@@ -28,23 +28,26 @@
           </div>
           <h2>{{roomInfo.name}}</h2>
           <h4 class="mb-4">{{roomInfo.blurb}}</h4>
-          <b-carousel
-            ref="carousel"
-            controls
-            fade
-            indicators
-            @sliding-start="isSliding=true;incrementRoom($event)"
-            @sliding-end="isSliding=false"
-            :interval="interval"
-            :img-height="768"
-          >
-            <b-carousel-slide
-              v-for="i in roomInfo.numImages"
-              :key="i"
-              :img-src="`/images/${roomInfo.name}/${i}.JPG`"
-              :img-alt="roomInfo.name + ' slide image'"
-            />
-          </b-carousel>
+          <div class="carousel-wrapper">
+            <b-carousel
+              v-if="isSliderVisible"
+              ref="carousel"
+              controls
+              fade
+              indicators
+              @sliding-start="isSliding=true;incrementRoom($event)"
+              @sliding-end="isSliding=false"
+              :interval="interval"
+              :img-height="768"
+            >
+              <b-carousel-slide
+                v-for="i in roomInfo.numImages"
+                :key="i"
+                :img-src="`/images/${roomInfo.name}/${i}.JPG`"
+                :img-alt="roomInfo.name + ' slide image'"
+              />
+            </b-carousel>
+          </div>
         </div>
       </div>
     </div>
@@ -54,6 +57,9 @@
 <script>
 import RoomData from '@/assets/RoomData'
 export default {
+  head() {
+    return { title: 'House Tour' }
+  },
   asyncData() {
     return {
       RoomData,
@@ -62,6 +68,7 @@ export default {
       interval: 4000,
       isSliding: false,
       isPaused: false,
+      isSliderVisible: true,
       expandedFloors: Array(RoomData.length).fill(false)
     }
   },
@@ -78,14 +85,20 @@ export default {
   },
   methods: {
     async reset(i, j) {
-      if (this.isSliding) return
       this.floorIndex = i
       this.roomIndex = j
+
+      this.isSliderVisible = false
+      this.$nextTick(() => {
+        this.isSliderVisible = true
+        this.$nextTick(() => {
+          this.$refs.carousel.setSlide(0)
+        })
+      })
+
       this.expandedFloors = [...new Array(RoomData.length).fill(false)]
       this.$set(this.expandedFloors, i, true)
 
-      this.$refs.carousel.setSlide(0)
-      this.$refs.carousel.start()
       this.isPaused = false
       if (
         this.RoomData[this.floorIndex].rooms[this.roomIndex].numImages === 1

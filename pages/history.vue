@@ -168,6 +168,14 @@
   </main>
 </template>
 
+<script>
+export default {
+  head() {
+    return { title: 'Farm History' }
+  }
+}
+</script>
+
 <style scoped>
 p {
   font-size: 24px;

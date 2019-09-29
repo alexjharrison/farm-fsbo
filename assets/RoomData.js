@@ -128,11 +128,11 @@ export default [
   {
     floor: 'Extra',
     rooms: [
-      {
-        name: 'Two Car Garage',
-        blurb: `33'9" X 23'7" with 2nd story finished playroom`,
-        numImages: 0
-      },
+      // {
+      //   name: 'Two Car Garage',
+      //   blurb: `33'9" X 23'7" with 2nd story finished playroom`,
+      //   numImages: 0
+      // },
       {
         name: 'Kids Insulated Playroom',
         blurb: `Above garage with lots of storage`,
