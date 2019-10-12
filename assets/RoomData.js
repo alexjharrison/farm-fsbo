@@ -89,7 +89,7 @@ export default [
     floor: 'Ground Floor',
     rooms: [
       {
-        name: 'Basement Rec Room',
+        name: 'Lower Level Rec Room',
         blurb: `34'9" X 14'8" with brick faced fireplace`,
         numImages: 4
       },
@@ -109,7 +109,7 @@ export default [
         numImages: 2
       },
       {
-        name: 'Basement 3rd Full Bathroom',
+        name: 'Lower Level 3rd Full Bathroom',
         blurb: `3'10" X 6'11"`,
         numImages: 2
       },

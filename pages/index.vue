@@ -11,7 +11,7 @@
         <h1>For Sale</h1>
       </em>
       <h2>132.5 Acre Picturesque Farm near Milton, PA</h2>
-      <h4>Gently Rolling Hills overlooking a Beautiful 18 Hole Golf Course</h4>
+      <h4>Gently Rolling Hills Overlooking the Beautiful Milton 18 Hole Golf Course</h4>
       <h4>
         <a
           rel="noopener noreferrer"
@@ -25,17 +25,6 @@
       <div class="row text-center mx-2">
         <div class="col-md-4 my-2">
           <b-card
-            title="The House"
-            img-alt="house"
-            img-top
-            img-src="~assets/images/home/house-thumb.jpg"
-          >
-            <b-card-text>Explore the house in a virtual tour</b-card-text>
-            <b-button :to="{path:'/house'}" variant="outline-primary">Check it out ➚</b-button>
-          </b-card>
-        </div>
-        <div class="col-md-4 my-2">
-          <b-card
             title="The Farm"
             img-top
             img-alt="farmhouse"
@@ -45,6 +34,18 @@
             <b-button :to="{path:'/farm'}" variant="outline-primary">Check it out ➚</b-button>
           </b-card>
         </div>
+        <div class="col-md-4 my-2">
+          <b-card
+            title="The House"
+            img-alt="house"
+            img-top
+            img-src="~assets/images/home/house-thumb.jpg"
+          >
+            <b-card-text>Explore the house in a virtual tour</b-card-text>
+            <b-button :to="{path:'/house'}" variant="outline-primary">Check it out ➚</b-button>
+          </b-card>
+        </div>
+
         <div class="col-md-4 my-2">
           <b-card
             title="The History"
