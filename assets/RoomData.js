@@ -56,7 +56,7 @@ export default [
       {
         name: 'Master Bedroom',
         blurb: `17'3" X 12'10"  with 8 1/2' closets and built-ins on opposite wall`,
-        numImages: 1
+        numImages: 4
       },
       {
         name: '2nd Bedroom',
@@ -106,7 +106,7 @@ export default [
       {
         name: 'Workshop',
         blurb: `9'5" X 7'3"`,
-        numImages: 2
+        numImages: 1
       },
       {
         name: 'Lower Level 3rd Full Bathroom',
@@ -121,27 +121,27 @@ export default [
       {
         name: 'Cold Cellar',
         blurb: `8' X 7'4" plus 2 closets (steps lead to breezeway)`,
-        numImages: 1
+        numImages: 2
       }
     ]
   },
   {
     floor: 'Extra',
     rooms: [
-      // {
-      //   name: 'Two Car Garage',
-      //   blurb: `33'9" X 23'7" with 2nd story finished playroom`,
-      //   numImages: 0
-      // },
+      {
+        name: 'Two and a Half Car Garage',
+        blurb: `33'9" X 23'7" with 2nd story finished playroom`,
+        numImages: 4
+      },
       {
         name: 'Kids Insulated Playroom',
         blurb: `Above garage with lots of storage`,
-        numImages: 2
+        numImages: 6
       },
       {
         name: 'Barn - Workshop',
-        blurb: ` `,
-        numImages: 3
+        blurb: ``,
+        numImages: 5
       }
     ]
   }
