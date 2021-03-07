@@ -13,22 +13,14 @@
         <div class="col-lg-6 d-flex flex-column align-items-start">
           <div class="d-flex">
             <div>
-              <h3 class="mb-0">Doug Wertz</h3>
-              <h5>Sales Associate, Licensed Realtor</h5>
+              <h3 class="mb-0">Joan Klinetob Harrison</h3>
+              <!-- <h5>Sales Associate, Licensed Realtor</h5>
               <h6 class="mb-2">Coldwell Banker</h6>
               <h6 class="mb-0">PENN ONE</h6>
-              <h6>REAL ESTATE</h6>
+              <h6>REAL ESTATE</h6> -->
               <div class="mt-2">
-                <a href="tel:5705241143">(570) 524-1143</a> Business
+                <a href="tel:5714497136">(571) 449-7136</a> 
               </div>
-              <div>
-                <a href="tel:5707139961">(570) 713-9961</a> Cell
-              </div>
-              <div>(570) 524-2814 Fax</div>
-              <a class="mt-3" href="mailto:douglaswertz@msn.com">douglaswertz@msn.com</a>
-            </div>
-            <div class="img-container ml-5 flex-shrink-1">
-              <b-img fluid src="@/assets/images/contact/doug-wertz.jpg" alt="doug wertz portrait" />
             </div>
           </div>
           <h4 class="mt-4">Or send an inquiry</h4>

@@ -3,14 +3,14 @@
     <div id="banner" class="d-flex">
       <div class="mt-auto mb-5 container d-flex flex-column align-items-end text-right">
         <h1 class="flex-shrink-1">Central PA Farm for Sale</h1>
-        <h1>$1,200,000</h1>
+        <h1>$950,000</h1>
       </div>
     </div>
     <div class="text-center m-5">
       <em>
         <h1>For Sale</h1>
       </em>
-      <h2>132.5 Acre Picturesque Farm near Milton, PA</h2>
+      <h2>~116 Acre Picturesque Farm near Milton, PA</h2>
       <h4>Gently Rolling Hills Overlooking the Beautiful Milton 18 Hole Golf Course</h4>
       <h4>
         <a
