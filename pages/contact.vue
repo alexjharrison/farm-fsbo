@@ -13,43 +13,14 @@
         <div class="col-lg-6 d-flex flex-column align-items-start">
           <div class="d-flex">
             <div>
+              <h1>Contact</h1>
               <h3 class="mb-0">Joan Klinetob Harrison</h3>
-              <!-- <h5>Sales Associate, Licensed Realtor</h5>
-              <h6 class="mb-2">Coldwell Banker</h6>
-              <h6 class="mb-0">PENN ONE</h6>
-              <h6>REAL ESTATE</h6> -->
               <div class="mt-2">
-                <a href="tel:5714497136">(571) 449-7136</a> 
+                Phone: <a href="tel:5714497136">(571) 449-7136</a> 
               </div>
+              Email: <a class="mt-3" href="mailto:joanhar@gmail.com">joanhar@gmail.com</a>
             </div>
           </div>
-          <h4 class="mt-4">Or send an inquiry</h4>
-          <b-form @submit.prevent="submitInquiry">
-            <div class="d-flex">
-              <div class="m-1">
-                <label for="name">Name *</label>
-                <b-form-input v-model="name" id="name" required />
-              </div>
-              <div class="m-1">
-                <label for="phone">Phone</label>
-                <b-form-input v-model="phone" id="phone" />
-              </div>
-              <div class="m-1">
-                <label for="email">Email</label>
-                <b-form-input type="email" v-model="email" id="email" />
-              </div>
-            </div>
-            <label for="message">Enter Message *</label>
-            <b-form-textarea
-              v-model="message"
-              id="message"
-              placeholder="Enter your message..."
-              rows="3"
-              required
-            ></b-form-textarea>
-            <div class="my-2">* Required</div>
-            <b-button type="submit" class="my-3" variant="outline-primary">{{btnText}}</b-button>
-          </b-form>
         </div>
       </div>
     </div>
