@@ -6,7 +6,7 @@
         <h3>Aerial View</h3>
         <div class="embed-wrapper">
           <b-embed
-            src="https://www.youtube.com/embed/YX0nJ0imz04"
+            src="https://www.youtube.com/embed/Oac5FLhcyGk"
             frameborder="0"
             type="iframe"
             aspect="16by9"
