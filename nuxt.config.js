@@ -77,7 +77,7 @@ module.exports = {
   },
 
   googleAnalytics: {
-    id: 'UA-130438116-3'
+    id: 'UA-130438116-5'
     // debug: {
     //   enabled: true,
     //   sendHitTask: true
