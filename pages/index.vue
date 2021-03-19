@@ -3,7 +3,7 @@
     <div id="banner" class="d-flex">
       <div class="mt-auto mb-5 container d-flex flex-column align-items-end text-right">
         <h1 class="flex-shrink-1">Central PA Farm for Sale</h1>
-        <h1>$950,000</h1>
+        <h1>$949,900</h1>
       </div>
     </div>
     <div class="text-center m-5">
