@@ -2,6 +2,7 @@ require('dotenv').config()
 const nodemailer = require('nodemailer')
 
 exports.handler = async function(event, context, callback) {
+  console.log(event)
   let data = parseQuery(event.body)
   let { name, email, message, phone } = data
   let mailOptions = {
