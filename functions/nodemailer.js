@@ -1,28 +1,14 @@
 require('dotenv').config()
+const nodemailer = require('nodemailer')
 
-// Connect to our Mailgun API wrapper and instantiate it
-const mailgun = require('mailgun-js')
-const mg = mailgun({
-  apiKey: process.env.MAILGUN_API_KEY,
-  domain: process.env.MAILGUN_DOMAIN
-})
-
-// Response stuff
-const successCode = 200
-const errorCode = 400
-const headers = {
-  'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Headers': 'Content-Type'
-}
-
-// Our cloud function
-exports.handler = function(event, context, callback) {
-  let data = JSON.parse(event.body)
+exports.handler = async function(event, context, callback) {
+  let data = parseQuery(event.body)
   let { name, email, message, phone } = data
+  console.log(process.env.TO_EMAIL_ADDRESS, process.env.BCC_EMAIL_ADDRESS)
   let mailOptions = {
-    from: `${name} <${email}>`,
+    from: process.env.EMAIL,
     to: process.env.TO_EMAIL_ADDRESS,
-    bcc: [process.env.BCC_EMAIL_ADDRESS],
+    cc: [process.env.BCC_EMAIL_ADDRESS],
     replyTo: email,
     subject: `Message from miltonpafarm.com contact form`,
     text: `
@@ -32,24 +18,37 @@ exports.handler = function(event, context, callback) {
     Message: ${message}`
   }
 
-  // It's really as simple as this,
-  // directly from the Mailgun dashboard
-
-  mg.messages().send(mailOptions, (error, body) => {
-    if (error) {
-      console.log(error)
-      callback(null, {
-        statusCode: errorCode,
-        headers,
-        body: JSON.stringify(error)
-      })
-    } else {
-      console.log(body)
-      callback(null, {
-        statusCode: successCode,
-        headers,
-        body: JSON.stringify(body)
-      })
+  let transporter = nodemailer.createTransport({
+    host: 'mail.privateemail.com',
+    port: 465,
+    secure: true, // true for 465, false for other ports
+    auth: {
+      user: process.env.EMAIL,
+      pass: process.env.EMAIL_PASSWORD
     }
   })
+
+  return transporter
+    .sendMail(mailOptions)
+    .then(() => ({
+      statusCode: 200,
+      body: 'Message Sent Successfully'
+    }))
+    .catch((err) => ({
+      statusCode: 500,
+      body: JSON.stringify(err)
+    }))
+}
+
+function parseQuery(queryString) {
+  var query = {}
+  var pairs = (queryString[0] === '?'
+    ? queryString.substr(1)
+    : queryString
+  ).split('&')
+  for (var i = 0; i < pairs.length; i++) {
+    var pair = pairs[i].split('=')
+    query[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1] || '')
+  }
+  return query
 }
