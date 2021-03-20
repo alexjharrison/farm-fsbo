@@ -3,7 +3,7 @@
     <header class="position-relative">
       <b-img
         class="header-img"
-        src="~assets/images/farm/DJI_0041 (Medium).JPG"
+        src="~assets/images/property/header.jpg"
         alt="side view of house"
       />
       <div class="custom-container">
@@ -48,13 +48,17 @@
         </div>
         <b-img
           class="col-lg-6"
-          src="~assets/images/farm/DJI_0052 (Medium).jpg"
+          src="~assets/images/property/house.jpg"
           alt="side view of house"
         />
       </section>
 
       <section class="row flex-wrap-reverse">
-        <b-img class="col-lg-5" src="/images/Two and a Half Car Garage/4.JPG" />
+        <b-img
+          class="col-lg-5"
+          src="~assets/images/property/garage.jpg"
+          alt="inside of garage"
+        />
         <div class="col-lg-7">
           <h2>GARAGE</h2>
           <p>
@@ -80,12 +84,17 @@
         </div>
         <b-img
           class="col-lg-6"
-          src="~assets/images/farm/barn from above 001.JPG"
-        ></b-img>
+          src="~assets/images/property/barn.jpg"
+          alt="barn exterior"
+        />
       </section>
 
       <section class="row flex-wrap-reverse">
-        <b-img class="col-lg-5" src="/images/Workshop/1.JPG" />
+        <b-img
+          class="col-lg-5"
+          src="~assets/images/property/workshop.jpg"
+          alt="inside of workshop"
+        />
         <div class="col-lg-7">
           <h2>WORKSHOP</h2>
           <p>
@@ -108,7 +117,8 @@
         </div>
         <b-img
           class="col-lg-5"
-          src="~assets/images/farm/DJI_0084 (Medium).jpg"
+          src="~assets/images/property/outbuildings.jpg"
+          alt="outbuildings from drone view"
         />
       </section>
 
