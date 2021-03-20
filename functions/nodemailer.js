@@ -4,7 +4,6 @@ const nodemailer = require('nodemailer')
 exports.handler = async function(event, context, callback) {
   let data = parseQuery(event.body)
   let { name, email, message, phone } = data
-  console.log(process.env.TO_EMAIL_ADDRESS, process.env.BCC_EMAIL_ADDRESS)
   let mailOptions = {
     from: process.env.EMAIL,
     to: process.env.TO_EMAIL_ADDRESS,
@@ -13,8 +12,8 @@ exports.handler = async function(event, context, callback) {
     subject: `Message from miltonpafarm.com contact form`,
     text: `
     Name: ${name}
-    Email: ${email}
-    Phone: ${phone}
+    Email: ${email || 'none'}
+    Phone: ${phone || 'none'}
     Message: ${message}`
   }
 
