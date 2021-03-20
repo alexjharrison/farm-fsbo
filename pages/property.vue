@@ -3,7 +3,7 @@
     <header class="position-relative">
       <b-img
         class="header-img"
-        src="~/assets/images/farm/DJI_0041 (Medium).JPG"
+        src="~assets/images/farm/DJI_0041 (Medium).JPG"
         alt="side view of house"
       />
       <div class="custom-container">
@@ -48,7 +48,7 @@
         </div>
         <b-img
           class="col-lg-6"
-          src="~/assets/images/farm/DJI_0052 (Medium).jpg"
+          src="~assets/images/farm/DJI_0052 (Medium).jpg"
           alt="side view of house"
         />
       </section>
@@ -80,7 +80,7 @@
         </div>
         <b-img
           class="col-lg-6"
-          src="~/assets/images/farm/barn from above 001.JPG"
+          src="~assets/images/farm/barn from above 001.JPG"
         ></b-img>
       </section>
 
@@ -108,7 +108,7 @@
         </div>
         <b-img
           class="col-lg-5"
-          src="~/assets/images/farm/DJI_0084 (Medium).jpg"
+          src="~assets/images/farm/DJI_0084 (Medium).jpg"
         />
       </section>
 
