@@ -48,7 +48,7 @@
 
         <div class="col-md-4 my-2">
           <b-card
-            title="The History"
+            title="The Property"
             img-top
             img-alt="farmhouse being built"
             img-src="~assets/images/home/history-thumb.jpg"
