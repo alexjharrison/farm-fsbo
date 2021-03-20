@@ -4,7 +4,6 @@ const nodemailer = require('nodemailer')
 exports.handler = async function(event, context, callback) {
   let data = JSON.parse(event.body)
   let { name, email, message, phone } = data
-  console.log({ name, email, message, phone })
   let mailOptions = {
     from: process.env.EMAIL,
     to: process.env.TO_EMAIL_ADDRESS,
