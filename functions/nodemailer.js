@@ -30,10 +30,16 @@ exports.handler = async function(event, context, callback) {
 
   return transporter
     .sendMail(mailOptions)
-    .then(() => ({
-      statusCode: 200,
-      body: 'Message Sent Successfully'
-    }))
+    .then(() => {
+      this.name = ''
+      this.email = ''
+      this.phone = ''
+      this.message = ''
+      return {
+        statusCode: 200,
+        body: 'Message Sent Successfully'
+      }
+    })
     .catch((err) => ({
       statusCode: 500,
       body: JSON.stringify(err)
