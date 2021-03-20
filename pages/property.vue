@@ -46,53 +46,70 @@
             storage, a furnace room, a workshop, and a cold cellar.
           </p>
         </div>
-        <div class="col-lg-6 overflow-hidden text-center">
-          <b-img
-            src="~/assets/images/farm/DJI_0052 (Medium).jpg"
-            alt="side view of house"
-          />
+        <b-img
+          class="col-lg-6"
+          src="~/assets/images/farm/DJI_0052 (Medium).jpg"
+          alt="side view of house"
+        />
+      </section>
+
+      <section class="row flex-wrap-reverse">
+        <b-img class="col-lg-5" src="/images/Two and a Half Car Garage/4.JPG" />
+        <div class="col-lg-7">
+          <h2>GARAGE</h2>
+          <p>
+            There is an insulated and finished bonus room above the attached 2.5
+            car garage that could be used as an additional playroom, office or
+            craft area and has storage space under the eaves.
+          </p>
         </div>
       </section>
 
-      <section>
-        <h2>GARAGE</h2>
-        <p>
-          There is an insulated and finished bonus room above the attached 2.5
-          car garage that could be used as an additional playroom, office or
-          craft area and has storage space under the eaves.
-        </p>
+      <section class="row">
+        <div class="col-lg-6">
+          <h2>BARN</h2>
+          <p>
+            The lower level of the 30 X 60 bank barn has double barn doors on
+            each end, 2 standing stalls, 3 pens, and a large open area that
+            could be enclosed (with full length, cement feeding troughs along
+            both sides). The barn’s large, open, upper level, with curved
+            laminated rafters, also has a set of two, wide barn doors, accessed
+            from the uphill side of the barn. There are stairs that can also be
+            used as a hay bale chute.
+          </p>
+        </div>
+        <b-img
+          class="col-lg-6"
+          src="~/assets/images/farm/barn from above 001.JPG"
+        ></b-img>
       </section>
 
-      <section>
-        <h2>BARN</h2>
-        <p>
-          The lower level of the 30 X 60 bank barn has double barn doors on each
-          end, 2 standing stalls, 3 pens, and a large open area that could be
-          enclosed (with full length, cement feeding troughs along both sides).
-          The barn’s large, open, upper level, with curved laminated rafters,
-          also has a set of two, wide barn doors, accessed from the uphill side
-          of the barn. There are stairs that can also be used as a hay bale
-          chute.
-        </p>
+      <section class="row flex-wrap-reverse">
+        <b-img class="col-lg-5" src="/images/Workshop/1.JPG" />
+        <div class="col-lg-7">
+          <h2>WORKSHOP</h2>
+          <p>
+            There is a full length workshop by the barn, with a covered area
+            between the two, and overhead garage doors on each end of the
+            workshop.
+          </p>
+        </div>
       </section>
 
-      <section>
-        <h2>WORKSHOP</h2>
-        <p>
-          There is a full length workshop by the barn, with a covered area
-          between the two, and overhead garage doors on each end of the
-          workshop.
-        </p>
-      </section>
-
-      <section>
-        <h2>OUTBUILDINGS</h2>
-        <p>
-          The outbuildings include 2 large and 1 smaller pole buildings and a
-          detached garage with an attic shop area, all near the barn. There is
-          also a large pole building in the meadow, near a stream that runs
-          through the entire property.
-        </p>
+      <section class="row">
+        <div class="col-lg-7">
+          <h2>OUTBUILDINGS</h2>
+          <p>
+            The outbuildings include 2 large and 1 smaller pole buildings and a
+            detached garage with an attic shop area, all near the barn. There is
+            also a large pole building in the meadow, near a stream that runs
+            through the entire property.
+          </p>
+        </div>
+        <b-img
+          class="col-lg-5"
+          src="~/assets/images/farm/DJI_0084 (Medium).jpg"
+        />
       </section>
 
       <section>
@@ -115,8 +132,8 @@
         ></iframe>
       </section>
 
-      <section>
-        <h2 class="text-center">FIND OUT MORE</h2>
+      <section class="py-5">
+        <h2 class="text-center mb-5">FIND OUT MORE</h2>
         <div class="d-flex justify-content-center mt-3 flex-wrap">
           <b-button variant="outline-dark" to="/house">House Tour</b-button>
           <b-button variant="outline-dark" to="/farm">Farm Tour</b-button>
@@ -139,8 +156,8 @@ h3 {
   font-size: 40px;
 }
 section {
-  margin-top: 20px;
-  padding-top: 20px;
+  margin-top: 60px;
+  padding-top: 60px;
   border-top: 1px solid #eee;
 }
 header {
@@ -152,6 +169,7 @@ header img {
   object-fit: cover;
 }
 section img {
+  object-fit: cover;
   object-position: center;
 }
 header h1 {

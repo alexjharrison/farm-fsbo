@@ -16,11 +16,47 @@
               <h1>Contact</h1>
               <h3 class="mb-0">Joan Klinetob Harrison</h3>
               <div class="mt-2">
-                Phone: <a href="tel:5714497136">(571) 449-7136</a> 
+                Phone: <a href="tel:5714497136">(571) 449-7136</a>
               </div>
-              Email: <a class="mt-3" href="mailto:joanhar@gmail.com">joanhar@gmail.com</a>
+              Email:
+              <a class="mt-3" href="mailto:MiltonPAFarmforsale@gmail.com"
+                >MiltonPAFarmforsale@gmail.com</a
+              >
             </div>
           </div>
+          <h4 class="mt-4">Or send an inquiry</h4>
+          <b-form @submit.prevent="submitInquiry">
+            <div class="d-flex">
+              <div class="m-1">
+                <label for="name">Name *</label>
+                <b-form-input v-model="name" id="name" required />
+              </div>
+              <div class="m-1">
+                <label for="phone">Phone</label>
+                <b-form-input v-model="phone" id="phone" />
+              </div>
+              <div class="m-1">
+                <label for="email">Email</label>
+                <b-form-input type="email" v-model="email" id="email" />
+              </div>
+            </div>
+            <label for="message">Enter Message *</label>
+            <b-form-textarea
+              v-model="message"
+              id="message"
+              placeholder="Enter your message..."
+              rows="3"
+              required
+            ></b-form-textarea>
+            <div class="my-2">* Required</div>
+            <b-button
+              type="submit"
+              class="my-3"
+              variant="outline-primary"
+              :disabled="isSubmitting"
+              >{{ btnText }}</b-button
+            >
+          </b-form>
         </div>
       </div>
     </div>
@@ -39,14 +75,16 @@ export default {
       phone: '',
       email: '',
       message: '',
-      btnText: 'Send'
+      btnText: 'Send',
+      isSubmitting: false
     }
   },
   methods: {
     submitInquiry() {
+      this.isSubmitting = true
       const { name, phone, email, message } = this
       this.btnText = 'Sending...'
-      const postAddress = '/.netlify/functions/mailgun-form'
+      const postAddress = '/.netlify/functions/nodemailer'
       axios
         .post(
           postAddress,
@@ -59,11 +97,11 @@ export default {
           { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }
         )
         .then(({ data }) => (this.btnText = 'Successfully Sent!'))
-        .catch(
-          ({ data }) =>
-            (this.btnText =
-              'Something broke.  Will punish the developer harshly for this.')
-        )
+        .catch(({ data }) => {
+          this.isSubmitting = false
+          this.btnText =
+            'Something broke.  Will punish the developer harshly for this.'
+        })
     }
   }
 }
