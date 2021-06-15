@@ -18,7 +18,7 @@
         Gently Rolling Hills Overlooking the Beautiful Milton 18 Hole Golf
         Course
       </h4>
-      <h4 class="mb-4">Additional Acreage Availabe Separately</h4>
+      <h4 class="mb-4">Additional Acreage Available Separately</h4>
       <h4>
         <a
           rel="noopener noreferrer"
