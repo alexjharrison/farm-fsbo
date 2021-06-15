@@ -4,19 +4,21 @@
       <div
         class="mt-auto mb-5 container d-flex flex-column align-items-end text-right"
       >
-        <h1 class="flex-shrink-1">Central PA Farm for Sale</h1>
-        <h1>$949,900</h1>
+        <h1 class="flex-shrink-1">Central PA Farmette for Sale</h1>
+        <h1>$500,000</h1>
       </div>
     </div>
     <div class="text-center m-5">
       <em>
         <h1>For Sale</h1>
       </em>
-      <h2>~116 Acre Picturesque Farm near Milton, PA</h2>
+      <h2 class="mb-4">~23 Acre Picturesque Farmette near Milton, PA</h2>
+
       <h4>
         Gently Rolling Hills Overlooking the Beautiful Milton 18 Hole Golf
         Course
       </h4>
+      <h4 class="mb-4">Additional Acreage Availabe Separately</h4>
       <h4>
         <a
           rel="noopener noreferrer"
@@ -25,11 +27,7 @@
           >704 Klinetob Rd, Milton, PA 17847</a
         >
       </h4>
-      <b-button
-        :to="{ path: '/property' }"
-        size="lg"
-        variant="dark"
-        class="m-3"
+      <b-button :to="{ path: '/property' }" size="lg" variant="dark" class="m-3"
         >Property Details</b-button
       >
       <b-button
