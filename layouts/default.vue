@@ -5,36 +5,6 @@
         <b-navbar toggleable="md" type="dark" variant="secondary">
           <div class="container-fluid mw-1440 px-2">
             <b-navbar-brand :to="{ path: '/' }">Milton PA Farm</b-navbar-brand>
-            <b-navbar-toggle target="nav-collapse" />
-            <b-collapse is-nav id="nav-collapse">
-              <b-navbar-nav class="ml-auto">
-                <b-nav-item
-                  :active="$route.path === '/property'"
-                  :to="{ path: '/property' }"
-                  >The Property</b-nav-item
-                >
-                <b-nav-item
-                  :active="$route.path === '/house'"
-                  :to="{ path: '/house' }"
-                  >House Tour</b-nav-item
-                >
-                <b-nav-item
-                  :active="$route.path === '/farm'"
-                  :to="{ path: '/farm' }"
-                  >The Farm</b-nav-item
-                >
-                <b-nav-item
-                  :active="$route.path === '/history'"
-                  :to="{ path: '/history' }"
-                  >The History</b-nav-item
-                >
-                <b-nav-item
-                  :active="$route.path === '/contact'"
-                  :to="{ path: '/contact' }"
-                  >Contact</b-nav-item
-                >
-              </b-navbar-nav>
-            </b-collapse>
           </div>
         </b-navbar>
       </header>
@@ -49,7 +19,9 @@
 <script>
 export default {
   components: {},
-  methods: {}
+  beforeMount() {
+    this.$router.push('/')
+  }
 }
 </script>
 
